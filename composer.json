@@ -1,0 +1,15 @@
+{
+  "name": "oyama/php-calendar",
+  "autoload": {
+    "psr-4": {
+      "PHPCalendar\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "daichi",
+      "email": "okumuradaichi2007@gmail.com"
+    }
+  ],
+  "require": {}
+}
