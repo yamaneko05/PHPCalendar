@@ -1,5 +1,5 @@
 {
-  "name": "oyama/php-calendar",
+  "name": "yamaneko05/php-calendar",
   "autoload": {
     "psr-4": {
       "Oyama\\PHPCalendar\\": "src/"
