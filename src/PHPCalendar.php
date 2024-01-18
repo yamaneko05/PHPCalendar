@@ -14,7 +14,7 @@ class PHPCalendar
 
     # 空の配列を生成
     for ($i = 0; $i < 6; $i++) {
-      $week = array_fill(0, 6, null);
+      $week = array_fill(0, 7, null);
       array_push($this->calendar, $week);
     }
 

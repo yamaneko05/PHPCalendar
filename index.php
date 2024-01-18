@@ -41,6 +41,7 @@ $next = $calendar->getNext();
       </a>
     </div>
   </div>
+  <?php print_r($calendar->getCalendar()) ?>
   <table class="calendar-table table table-bordered" style="table-layout: fixed;">
     <thead class="text-center">
       <tr>
@@ -62,6 +63,7 @@ $next = $calendar->getNext();
                   <span class="badge text-bg-<?= $day->schedule[1] ?>"><?= $day->schedule[0] ?></span>
                 <?php endif; ?>
               <?php endif; ?>
+              <?php if (is_null($day)) echo "null"; ?>
             </td>
           <?php endforeach; ?>
         </tr>
