@@ -2,15 +2,13 @@
 
 require "./vendor/autoload.php";
 
-use app\PHPCalendar;
-
 $schedules = [
   4 => ["映画を見る", "primary"],
   12 => ["服買いに行く", "danger"],
   25 => ["彼女と会う", "dark"],
 ];
 
-$calendar = new PHPCalendar($_GET["month"] ?? date("m"), $_GET["year"] ?? date("Y"), $schedules);
+$calendar = new Oyama\PHPCalendar($_GET["month"] ?? date("m"), $_GET["year"] ?? date("Y"), $schedules);
 $current = $calendar->getCurrent();
 $prev = $calendar->getPrev();
 $next = $calendar->getNext();
@@ -63,7 +61,6 @@ $next = $calendar->getNext();
                   <span class="badge text-bg-<?= $day->schedule[1] ?>"><?= $day->schedule[0] ?></span>
                 <?php endif; ?>
               <?php endif; ?>
-              <?php if (is_null($day)) echo "null"; ?>
             </td>
           <?php endforeach; ?>
         </tr>

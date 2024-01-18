@@ -2,7 +2,7 @@
   "name": "oyama/php-calendar",
   "autoload": {
     "psr-4": {
-      "app\\": "src/"
+      "Oyama\\PHPCalendar\\": "src/"
     }
   },
   "authors": [

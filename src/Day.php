@@ -1,6 +1,6 @@
 <?php 
 
-namespace app;
+namespace Oyama\PHPCalendar;
 
 class Day
 {
