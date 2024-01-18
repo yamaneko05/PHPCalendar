@@ -1,5 +1,7 @@
 <?php 
 
+namespace app;
+
 class PHPCalendar
 {
   private $calendar = [];
@@ -33,7 +35,7 @@ class PHPCalendar
       
     $week = 0;
     foreach ($days as $day) {
-      $w = date("w", $day["timestamp"]);
+      $w = date("w", $day->timestamp);
       $this->calendar[$week][$w] = $day;
       if ($w === "6") $week++;
     }

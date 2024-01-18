@@ -1,5 +1,7 @@
 <?php 
 
+namespace app;
+
 class Day
 {
   public $timestamp, $today, $schedule;

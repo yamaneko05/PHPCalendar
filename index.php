@@ -2,6 +2,8 @@
 
 require "./vendor/autoload.php";
 
+use app\PHPCalendar;
+
 $schedules = [
   4 => ["映画を見る", "primary"],
   12 => ["服買いに行く", "danger"],
@@ -53,9 +55,11 @@ $next = $calendar->getNext();
           <?php foreach ($week as $day): ?>
             <td style="height: 100px;">
               <?php if ($day): ?>
-                <p class="text-center"><span class="<?= $day->today ? "text-bg-primary badge" : ""; ?>"><?= date("j", $day->timestamp); ?></span></p>
+                <div class="text-center">
+                  <span class="<?= $day->today ? "text-bg-primary badge" : ""; ?>"><?= date("j", $day->timestamp); ?></span>
+                </div>
                 <?php if (isset($day->schedule)): ?>
-                  <span class="badge text-bg-<?= $day->schedule->color ?>"><?= $day->schedule->title ?></span>
+                  <span class="badge text-bg-<?= $day->schedule[1] ?>"><?= $day->schedule[0] ?></span>
                 <?php endif; ?>
               <?php endif; ?>
             </td>
